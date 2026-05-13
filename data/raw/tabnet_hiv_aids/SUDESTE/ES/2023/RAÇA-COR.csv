@@ -1,0 +1,41 @@
+ Casos de aids identificados no Brasil
+Freqüência por Município (Res) e Raça/cor
+UF Residência: Espírito Santo
+Período:2023
+"Município (Res)";"Branca";"Preta";"Amarela";"Parda";"Indígena";"Ignorado";"Total"
+"320010 Afonso Cláudio";1;0;0;0;0;0;1
+"320030 Alfredo Chaves";1;0;0;0;0;0;1
+"320040 Anchieta";0;0;0;1;0;0;1
+"320060 Aracruz";5;2;1;13;1;0;22
+"320090 Barra de São Francisco";3;1;0;1;0;0;5
+"320110 Bom Jesus do Norte";0;1;0;0;0;0;1
+"320120 Cachoeiro de Itapemirim";20;4;2;19;0;0;45
+"320130 Cariacica";13;6;3;33;0;1;56
+"320140 Castelo";0;0;1;0;0;0;1
+"320150 Colatina";8;3;0;9;0;0;20
+"320160 Conceição da Barra";0;0;0;1;0;2;3
+"320210 Ecoporanga";0;1;1;0;0;0;2
+"320220 Fundão";0;0;0;2;0;0;2
+"320230 Guaçuí";5;3;0;2;0;0;10
+"320240 Guarapari";4;2;1;8;0;0;15
+"320305 Jaguaré";0;0;0;2;0;0;2
+"320310 Jerônimo Monteiro";0;0;0;1;0;0;1
+"320320 Linhares";5;1;2;19;0;0;27
+"320330 Mantenópolis";0;0;0;1;0;0;1
+"320350 Montanha";1;0;0;0;0;0;1
+"320390 Nova Venécia";4;1;1;4;0;0;10
+"320400 Pancas";0;0;0;1;0;0;1
+"320405 Pedro Canário";0;1;0;3;0;0;4
+"320410 Pinheiros";1;0;1;4;0;0;6
+"320420 Piúma";1;0;0;1;0;0;2
+"320430 Presidente Kennedy";0;0;0;1;0;0;1
+"320435 Rio Bananal";0;1;0;0;0;0;1
+"320470 São Gabriel da Palha";1;0;2;1;0;0;4
+"320480 São José do Calçado";1;0;0;0;0;0;1
+"320490 São Mateus";9;6;8;27;0;1;51
+"320500 Serra";31;19;4;53;0;0;107
+"320501 Sooretama";0;0;2;2;0;0;4
+"320510 Viana";4;1;0;7;0;0;12
+"320520 Vila Velha";52;18;3;52;0;2;127
+"320530 Vitória";34;13;4;58;0;0;109
+"Total";204;84;36;326;1;6;657

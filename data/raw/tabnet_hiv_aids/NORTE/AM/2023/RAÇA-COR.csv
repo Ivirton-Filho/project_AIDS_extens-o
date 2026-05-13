@@ -1,0 +1,47 @@
+ Casos de aids identificados no Brasil
+Freqüência por Município (Res) e Raça/cor
+UF Residência: Amazonas
+Período:2023
+"Município (Res)";"Branca";"Preta";"Amarela";"Parda";"Indígena";"Ignorado";"Total"
+"130002 Alvarães";0;0;0;1;0;0;1
+"130008 Anamã";0;0;0;1;0;0;1
+"130010 Anori";0;0;0;1;0;0;1
+"130020 Atalaia do Norte";0;0;0;1;0;0;1
+"130030 Autazes";1;0;0;3;0;0;4
+"130050 Barreirinha";0;0;0;5;0;0;5
+"130060 Benjamin Constant";0;0;0;3;0;0;3
+"130080 Borba";0;0;0;2;0;0;2
+"130083 Caapiranga";0;0;0;1;0;0;1
+"130100 Carauari";0;0;0;2;0;0;2
+"130110 Careiro";0;0;0;5;0;0;5
+"130115 Careiro da Várzea";0;0;0;4;0;0;4
+"130120 Coari";2;0;0;11;0;0;13
+"130130 Codajás";0;0;0;1;0;0;1
+"130140 Eirunepé";0;0;0;3;0;0;3
+"130160 Fonte Boa";0;0;0;3;0;0;3
+"130170 Humaitá";0;0;0;2;0;0;2
+"130185 Iranduba";0;0;0;14;0;0;14
+"130190 Itacoatiara";2;0;0;30;0;2;34
+"130200 Itapiranga";2;0;0;1;0;0;3
+"130250 Manacapuru";1;1;0;9;0;0;11
+"130255 Manaquiri";0;0;0;1;0;0;1
+"130260 Manaus";140;16;14;945;7;9;1131
+"130270 Manicoré";0;0;0;2;0;0;2
+"130280 Maraã";0;0;0;1;0;0;1
+"130290 Maués";0;0;0;8;0;0;8
+"130300 Nhamundá";0;0;0;1;0;0;1
+"130310 Nova Olinda do Norte";0;0;0;8;0;0;8
+"130320 Novo Airão";0;0;0;6;1;0;7
+"130330 Novo Aripuanã";0;0;0;3;0;0;3
+"130340 Parintins";2;0;18;34;1;0;55
+"130353 Presidente Figueiredo";0;0;0;4;0;0;4
+"130356 Rio Preto da Eva";0;0;0;2;0;0;2
+"130360 Santa Isabel do Rio Negro";0;0;0;0;2;0;2
+"130370 Santo Antônio do Içá";0;0;0;1;0;0;1
+"130380 São Gabriel da Cachoeira";1;0;0;0;2;0;3
+"130406 Tabatinga";0;0;1;13;8;0;22
+"130410 Tapauá";0;0;0;1;0;0;1
+"130420 Tefé";1;0;0;21;0;0;22
+"130430 Urucará";0;0;0;4;0;0;4
+"130000 Município ignorado - AM";0;0;0;1;0;0;1
+"Total";152;17;33;1159;21;11;1393

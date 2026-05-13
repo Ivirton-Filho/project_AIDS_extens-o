@@ -1,0 +1,80 @@
+ Casos de aids identificados no Brasil
+Freqüência por Município (Res) e Raça/cor
+UF Residência: Rio de Janeiro
+Período:2023
+"Município (Res)";"Branca";"Preta";"Amarela";"Parda";"Indígena";"Ignorado";"Total"
+"330010 Angra dos Reis";17;5;0;7;0;0;29
+"330020 Araruama";10;5;0;7;0;0;22
+"330022 Areal";3;1;0;2;0;0;6
+"330023 Armação dos Búzios";4;1;0;3;0;0;8
+"330025 Arraial do Cabo";2;1;0;3;0;0;6
+"330030 Barra do Piraí";8;3;0;2;0;0;13
+"330040 Barra Mansa";19;3;2;7;0;0;31
+"330045 Belford Roxo";16;18;0;44;0;0;78
+"330060 Bom Jesus do Itabapoana";5;0;1;2;0;0;8
+"330070 Cabo Frio";29;12;0;15;0;0;56
+"330080 Cachoeiras de Macacu";4;2;1;6;0;0;13
+"330090 Cambuci";0;1;0;0;0;0;1
+"330100 Campos dos Goytacazes";46;20;1;39;1;6;113
+"330110 Cantagalo";0;0;0;1;0;0;1
+"330093 Carapebus";0;0;0;2;0;0;2
+"330120 Carmo";0;1;0;3;0;0;4
+"330130 Casimiro de Abreu";5;1;0;4;0;0;10
+"330140 Conceição de Macabu";0;1;0;0;0;0;1
+"330170 Duque de Caxias";44;53;2;106;0;8;213
+"330185 Guapimirim";2;1;0;1;0;0;4
+"330187 Iguaba Grande";4;0;0;1;0;0;5
+"330190 Itaboraí";22;10;0;18;0;0;50
+"330200 Itaguaí";6;5;0;19;0;0;30
+"330205 Italva";0;0;0;1;0;0;1
+"330210 Itaocara";1;0;0;0;0;0;1
+"330220 Itaperuna";10;8;1;4;0;0;23
+"330225 Itatiaia";0;1;1;1;0;0;3
+"330227 Japeri";11;7;0;27;0;1;46
+"330240 Macaé";26;16;0;27;0;5;74
+"330245 Macuco";2;0;0;0;0;0;2
+"330250 Magé";21;13;1;30;0;8;73
+"330260 Mangaratiba";5;0;0;5;0;0;10
+"330270 Maricá";23;9;0;15;0;0;47
+"330280 Mendes";1;0;0;0;0;0;1
+"330285 Mesquita";10;11;1;18;0;0;40
+"330290 Miguel Pereira";3;0;0;3;0;0;6
+"330320 Nilópolis";1;1;0;14;0;4;20
+"330330 Niterói";48;27;2;45;0;1;123
+"330340 Nova Friburgo";16;5;0;3;0;0;24
+"330350 Nova Iguaçu";100;68;6;150;1;8;333
+"330360 Paracambi";1;1;0;2;0;0;4
+"330370 Paraíba do Sul";0;2;0;0;0;0;2
+"330380 Parati";4;1;0;2;0;0;7
+"330390 Petrópolis";29;15;1;23;0;0;68
+"330395 Pinheiral";0;1;0;0;0;0;1
+"330400 Piraí";1;0;0;0;0;0;1
+"330410 Porciúncula";0;2;0;1;0;0;3
+"330411 Porto Real";0;0;0;1;0;0;1
+"330412 Quatis";1;0;0;0;0;0;1
+"330414 Queimados";13;9;0;27;0;2;51
+"330415 Quissamã";1;0;0;1;0;0;2
+"330420 Resende";18;3;2;8;0;0;31
+"330430 Rio Bonito";2;0;1;10;0;0;13
+"330440 Rio Claro";1;0;0;0;0;0;1
+"330452 Rio das Ostras";11;3;1;24;0;0;39
+"330455 Rio de Janeiro";589;367;31;820;2;47;1856
+"330470 Santo Antônio de Pádua";3;0;0;2;0;0;5
+"330480 São Fidélis";2;0;0;0;0;0;2
+"330475 São Francisco de Itabapoana";0;0;0;2;0;0;2
+"330490 São Gonçalo";68;43;2;108;0;5;226
+"330500 São João da Barra";4;1;0;1;0;0;6
+"330510 São João de Meriti";22;11;0;49;0;0;82
+"330520 São Pedro da Aldeia";12;5;0;7;0;2;26
+"330530 São Sebastião do Alto";1;0;0;1;0;0;2
+"330540 Sapucaia";0;0;0;1;0;0;1
+"330550 Saquarema";11;3;0;6;0;1;21
+"330555 Seropédica";7;4;0;6;0;1;18
+"330575 Tanguá";0;1;0;1;0;0;2
+"330580 Teresópolis";20;3;2;9;0;0;34
+"330600 Três Rios";3;3;0;13;0;0;19
+"330610 Valença";2;1;0;0;0;0;3
+"330620 Vassouras";6;5;0;3;0;0;14
+"330630 Volta Redonda";44;12;2;22;0;0;80
+"330000 Município ignorado - RJ";1;1;0;7;0;0;9
+"Total";1401;807;61;1792;4;99;4164

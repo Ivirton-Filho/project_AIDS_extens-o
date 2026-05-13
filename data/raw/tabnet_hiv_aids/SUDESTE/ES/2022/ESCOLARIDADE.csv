@@ -1,0 +1,43 @@
+ Casos de aids identificados no Brasil
+Freqüência por Município (Res) e Escolaridade
+UF Residência: Espírito Santo
+Período:2022
+"Município (Res)";"analfabeto";"1ª a 4ª série incompleta";"4ª série completa";"5ª a 8ª série incompleta";"fundamental completo";"médio incompleto";"médio completo";"superior incompleto";"superior completo";"Total"
+"320020 Alegre";3;0;0;0;0;1;0;0;0;4
+"320040 Anchieta";0;1;0;0;0;0;0;0;0;1
+"320060 Aracruz";0;2;0;2;1;1;3;0;1;10
+"320090 Barra de São Francisco";0;0;0;2;0;0;1;0;0;3
+"320100 Boa Esperança";1;0;0;1;0;0;0;0;0;2
+"320110 Bom Jesus do Norte";0;0;0;0;0;1;0;0;0;1
+"320120 Cachoeiro de Itapemirim";1;7;1;7;2;3;4;1;6;32
+"320130 Cariacica";1;1;0;3;2;0;4;0;2;13
+"320150 Colatina";1;6;5;6;1;0;7;1;2;29
+"320160 Conceição da Barra";0;1;0;0;0;1;0;0;0;2
+"320190 Domingos Martins";0;0;0;0;0;0;1;1;0;2
+"320210 Ecoporanga";0;1;0;0;0;0;0;0;0;1
+"320230 Guaçuí";0;0;0;3;0;0;4;1;0;8
+"320240 Guarapari";0;0;0;2;0;0;4;1;1;8
+"320305 Jaguaré";0;0;0;2;0;0;1;0;0;3
+"320320 Linhares";1;3;1;4;2;3;4;2;1;21
+"320334 Marechal Floriano";0;0;1;0;0;0;0;0;0;1
+"320335 Marilândia";1;0;0;0;0;0;0;0;0;1
+"320340 Mimoso do Sul";0;0;0;0;0;0;1;0;0;1
+"320370 Muniz Freire";0;0;0;1;0;0;0;0;0;1
+"320390 Nova Venécia";0;0;1;1;0;0;2;0;2;6
+"320405 Pedro Canário";0;0;1;0;0;1;0;0;0;2
+"320410 Pinheiros";0;2;0;0;0;0;0;0;0;2
+"320420 Piúma";0;0;0;0;0;0;1;0;0;1
+"320425 Ponto Belo";0;0;0;0;0;1;0;0;0;1
+"320435 Rio Bananal";0;2;0;1;0;0;0;0;0;3
+"320450 Santa Leopoldina";0;0;0;0;1;0;0;0;0;1
+"320455 Santa Maria de Jetibá";0;0;0;0;0;0;1;0;0;1
+"320460 Santa Teresa";0;0;0;1;0;0;0;0;0;1
+"320470 São Gabriel da Palha";1;1;0;1;0;0;0;0;0;3
+"320490 São Mateus";1;4;1;12;2;3;12;2;3;40
+"320500 Serra";2;6;6;6;13;7;27;3;5;75
+"320501 Sooretama";0;1;0;1;0;0;0;0;0;2
+"320506 Venda Nova do Imigrante";0;1;0;0;0;0;0;0;0;1
+"320510 Viana";0;0;1;4;0;2;0;0;0;7
+"320520 Vila Velha";2;5;3;9;7;11;27;3;8;75
+"320530 Vitória";1;5;2;8;7;10;18;8;15;74
+"Total";16;49;23;77;38;45;122;23;46;439

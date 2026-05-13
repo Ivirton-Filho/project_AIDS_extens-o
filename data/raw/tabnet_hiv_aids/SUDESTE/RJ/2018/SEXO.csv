@@ -1,0 +1,85 @@
+ Casos de aids identificados no Brasil
+Freqüência por Município (Res) e Sexo
+UF Residência: Rio de Janeiro
+Período:2018
+"Município (Res)";"Masculino";"Feminino";"Ignorado";"Total"
+"330010 Angra dos Reis";29;12;0;41
+"330015 Aperibé";1;0;0;1
+"330020 Araruama";10;9;0;19
+"330023 Armação dos Búzios";5;2;0;7
+"330025 Arraial do Cabo";5;1;0;6
+"330030 Barra do Piraí";12;7;0;19
+"330040 Barra Mansa";10;7;0;17
+"330045 Belford Roxo";55;34;0;89
+"330050 Bom Jardim";1;2;0;3
+"330060 Bom Jesus do Itabapoana";4;3;0;7
+"330070 Cabo Frio";29;14;0;43
+"330080 Cachoeiras de Macacu";4;5;0;9
+"330090 Cambuci";1;1;0;2
+"330100 Campos dos Goytacazes";74;51;0;125
+"330110 Cantagalo";3;0;0;3
+"330093 Carapebus";2;0;0;2
+"330115 Cardoso Moreira";1;1;0;2
+"330120 Carmo";2;1;0;3
+"330130 Casimiro de Abreu";1;2;0;3
+"330140 Conceição de Macabu";0;1;0;1
+"330150 Cordeiro";0;2;0;2
+"330170 Duque de Caxias";171;69;0;240
+"330185 Guapimirim";16;10;0;26
+"330187 Iguaba Grande";3;1;0;4
+"330190 Itaboraí";32;18;1;51
+"330200 Itaguaí";11;3;0;14
+"330205 Italva";0;1;0;1
+"330220 Itaperuna";14;3;0;17
+"330225 Itatiaia";4;1;0;5
+"330227 Japeri";17;14;0;31
+"330240 Macaé";51;33;0;84
+"330245 Macuco";1;1;0;2
+"330250 Magé";34;25;0;59
+"330260 Mangaratiba";6;0;0;6
+"330270 Maricá";20;9;0;29
+"330285 Mesquita";35;12;0;47
+"330290 Miguel Pereira";1;1;0;2
+"330300 Miracema";1;0;0;1
+"330310 Natividade";2;0;0;2
+"330320 Nilópolis";22;9;0;31
+"330330 Niterói";87;40;0;127
+"330340 Nova Friburgo";15;12;0;27
+"330350 Nova Iguaçu";157;98;0;255
+"330360 Paracambi";3;3;0;6
+"330370 Paraíba do Sul";5;2;0;7
+"330380 Parati";3;0;0;3
+"330390 Petrópolis";29;15;0;44
+"330395 Pinheiral";1;1;0;2
+"330400 Piraí";2;0;0;2
+"330410 Porciúncula";2;0;0;2
+"330411 Porto Real";3;1;0;4
+"330412 Quatis";1;0;0;1
+"330414 Queimados";19;9;0;28
+"330415 Quissamã";2;0;0;2
+"330420 Resende";21;12;0;33
+"330430 Rio Bonito";3;5;0;8
+"330440 Rio Claro";0;1;0;1
+"330450 Rio das Flores";1;0;0;1
+"330452 Rio das Ostras";36;15;0;51
+"330455 Rio de Janeiro";1334;582;0;1916
+"330470 Santo Antônio de Pádua";3;1;0;4
+"330480 São Fidélis";2;2;0;4
+"330475 São Francisco de Itabapoana";0;1;0;1
+"330490 São Gonçalo";140;82;0;222
+"330500 São João da Barra";4;6;0;10
+"330510 São João de Meriti";74;30;0;104
+"330520 São Pedro da Aldeia";9;7;0;16
+"330540 Sapucaia";1;0;0;1
+"330550 Saquarema";11;6;0;17
+"330555 Seropédica";7;1;0;8
+"330575 Tanguá";2;0;0;2
+"330580 Teresópolis";16;13;0;29
+"330590 Trajano de Morais";1;0;0;1
+"330600 Três Rios";20;10;0;30
+"330610 Valença";12;4;0;16
+"330615 Varre-Sai";1;0;0;1
+"330620 Vassouras";8;2;0;10
+"330630 Volta Redonda";60;15;0;75
+"330000 Município ignorado - RJ";3;3;0;6
+"Total";2788;1344;1;4133
