@@ -5,6 +5,4 @@ venv/
 .env
 .idea/
 .streamlit/secrets.toml
-data/processed/*.csv
-data/processed/*.parquet
 outputs/
