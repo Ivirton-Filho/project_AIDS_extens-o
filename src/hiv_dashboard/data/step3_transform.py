@@ -4,6 +4,7 @@ import pandas as pd
 
 from src.hiv_dashboard.data.step1_reading import ler_csv_tabnet
 from src.hiv_dashboard.data.step2_cleaning import limpar_dataframe
+from src.hiv_dashboard.paths import RAW_DATA_DIR, PROCESSED_DATA_DIR
 COLUNAS_CONTEXTO = ["regiao", "uf", "cod_ibge", "municipio", "ano_diagnostico"]
 
 def extrair_info_caminho(caminho: Path) -> dict:
@@ -50,9 +51,8 @@ def consolidar():
     print("ETAPA 3 - CONSOLIDACAO DOS DADOS")
     print("=" * 50)
 
-    # Caminhos relativos a este arquivo (src/hiv_dashboard/data/step3_transform.py)
-    PASTA_BRUTOS = Path(__file__).resolve().parents[3] / "data" / "raw" / "tabnet_hiv_aids"
-    PASTA_SAIDA = Path(__file__).resolve().parents[3] / "data" / "processed"
+    PASTA_BRUTOS = RAW_DATA_DIR
+    PASTA_SAIDA = PROCESSED_DATA_DIR
 
     # Listar todos os CSVs
     csvs = sorted(PASTA_BRUTOS.rglob("*.csv"))
