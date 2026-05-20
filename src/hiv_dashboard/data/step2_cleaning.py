@@ -1,16 +1,11 @@
 import re
-from pathlib import Path
-
 import pandas as pd
 
-from step1_reading import ler_csv_tabnet
-
-# Pasta raiz dos dados brutos
-PASTA_BRUTOS = Path(__file__).resolve().parents[1] / "data" / "raw" / "tabnet_hiv_aids"
-
-
 def limpar_dataframe(df: pd.DataFrame) -> pd.DataFrame:
-
+    """
+    Limpa o dataframe bruto extraído do TabNet.
+    Separa códigos do IBGE dos nomes de municípios e remove lixo.
+    """
     df = df.copy()
 
     #Separar codigo IBGE e nome do municipio 
@@ -58,20 +53,3 @@ def limpar_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     df = df[["cod_ibge", "municipio"] + colunas_de_dados]
 
     return df
-
-
-if __name__ == "__main__":
-    caminho_sexo = PASTA_BRUTOS / "NORDESTE" / "PE" / "2023" / "SEXO.csv"
-
-    print("=== ANTES DA LIMPEZA ===")
-    df_bruto = ler_csv_tabnet(caminho_sexo)
-    print(f"Linhas: {len(df_bruto)}")
-    print(f"Colunas: {list(df_bruto.columns)}")
-    print(df_bruto.head(5).to_string(index=False))
-
-    print("\n=== DEPOIS DA LIMPEZA ===")
-    df_limpo = limpar_dataframe(df_bruto)
-    print(f"Linhas: {len(df_limpo)}")
-    print(f"Colunas: {list(df_limpo.columns)}")
-    print(df_limpo.head(5).to_string(index=False))
-
