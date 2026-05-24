@@ -13,3 +13,4 @@ outputs/
 
 # Dados Processados
 data/processed/
+!data/processed/.gitkeep
