@@ -2,9 +2,8 @@ import re
 from pathlib import Path
 import pandas as pd
 
-from src.hiv_dashboard.data.step1_reading import ler_csv_tabnet
-from src.hiv_dashboard.data.step2_cleaning import limpar_dataframe
-from src.hiv_dashboard.paths import RAW_DATA_DIR, PROCESSED_DATA_DIR
+from src.hiv_dashboard.paths import PROCESSED_DATA_DIR
+
 COLUNAS_CONTEXTO = ["regiao", "uf", "cod_ibge", "municipio", "ano_diagnostico"]
 
 def extrair_info_caminho(caminho: Path) -> dict:
@@ -17,8 +16,11 @@ def extrair_info_caminho(caminho: Path) -> dict:
     pasta_ano = partes[idx + 3]
     dimensao = caminho.stem
 
-    # Extrair so o numero do ano
-    ano = int(re.match(r"(\d{4})", pasta_ano).group(1))
+    # Extrair so o numero do ano (procura em qualquer lugar do nome da pasta)
+    match_ano = re.search(r"(\d{4})", pasta_ano)
+    if not match_ano:
+        raise ValueError(f"Não foi possível encontrar um ano na pasta '{pasta_ano}' (caminho: {caminho})")
+    ano = int(match_ano.group(1))
 
     dimensao = dimensao.upper().replace("-", "_")
 
@@ -43,61 +45,38 @@ def adicionar_nao_informado(df_dimensao: pd.DataFrame, df_ano: pd.DataFrame) -> 
 
     return df.drop(columns=["soma_categorias"])
 
+def consolidar(dados_lidos: list):
 
-def consolidar():
-    #Percorre todos os CSVs, limpa e salva os 5 arquivos finais.
-
-    print("=" * 50)
-    print("ETAPA 3 - CONSOLIDACAO DOS DADOS")
-    print("=" * 50)
-
-    PASTA_BRUTOS = RAW_DATA_DIR
     PASTA_SAIDA = PROCESSED_DATA_DIR
 
-    # Listar todos os CSVs
-    csvs = sorted(PASTA_BRUTOS.rglob("*.csv"))
-    print(f"Encontrados {len(csvs)} CSVs\n")
-
-    # Primeiro: ler todos os ANO.csv para ter os totais de referencia
     # Chave: (uf, ano) -> DataFrame limpo do ANO
     totais_por_uf_ano = {}
 
     # Acumular DataFrames por dimensao
     dados_por_dimensao = {}
 
-    erros = 0
+    for caminho, df_limpo in dados_lidos:
+        info = extrair_info_caminho(caminho)
 
-    for caminho in csvs:
-        try:
-            info = extrair_info_caminho(caminho)
-            df_bruto = ler_csv_tabnet(caminho)
-            df_limpo = limpar_dataframe(df_bruto)
+        # Adicionar colunas de contexto
+        df_limpo["regiao"] = info["regiao"]
+        df_limpo["uf"] = info["uf"]
+        df_limpo["ano_diagnostico"] = info["ano"]
 
-            # Adicionar colunas de contexto
-            df_limpo["regiao"] = info["regiao"]
-            df_limpo["uf"] = info["uf"]
-            df_limpo["ano_diagnostico"] = info["ano"]
+        # Reordenar: contexto primeiro
+        colunas_dados = [c for c in df_limpo.columns if c not in COLUNAS_CONTEXTO]
+        df_limpo = df_limpo[COLUNAS_CONTEXTO + colunas_dados]
 
-            # Reordenar: contexto primeiro
-            colunas_dados = [c for c in df_limpo.columns if c not in COLUNAS_CONTEXTO]
-            df_limpo = df_limpo[COLUNAS_CONTEXTO + colunas_dados]
+        dimensao = info["dimensao"]
 
-            dimensao = info["dimensao"]
+        # Guardar os ANO para referencia
+        if dimensao == "ANO":
+            totais_por_uf_ano[(info["uf"], info["ano"])] = df_limpo.copy()
 
-            # Guardar os ANO para referencia
-            if dimensao == "ANO":
-                totais_por_uf_ano[(info["uf"], info["ano"])] = df_limpo.copy()
-
-            # Acumular por dimensao
-            if dimensao not in dados_por_dimensao:
-                dados_por_dimensao[dimensao] = []
-            dados_por_dimensao[dimensao].append(df_limpo)
-
-        except Exception as e:
-            erros += 1
-            print(f"  ERRO em {caminho.name}: {e}")
-
-    print(f"Processados: {len(csvs) - erros} CSVs ({erros} erros)\n")
+        # Acumular por dimensao
+        if dimensao not in dados_por_dimensao:
+            dados_por_dimensao[dimensao] = []
+        dados_por_dimensao[dimensao].append(df_limpo)
 
     # Juntar e salvar cada dimensao
     PASTA_SAIDA.mkdir(parents=True, exist_ok=True)
@@ -130,6 +109,5 @@ def consolidar():
         # Salvar
         nome = nomes_saida.get(dimensao, dimensao.lower())
         df_final.to_csv(PASTA_SAIDA / f"{nome}.csv", index=False, encoding="utf-8-sig")
-        print(f"  {nome}.csv: {len(df_final):,} registros")
 
     print("\nConsolidacao concluida!")
