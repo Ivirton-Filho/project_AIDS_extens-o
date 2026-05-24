@@ -1,29 +1,31 @@
  Casos de aids identificados no Brasil
-Freqüência por Município (Res) e Fx. Etária(13)
+Freqüência por Município (Res) e Ano Diagnóstico
+Ano Diagnóstico: 2025
 UF Residência: Sergipe
+Região Res.: Região Nordeste
 Período:2025
-"Município (Res)";"5-9";"15-19";"20-29";"30-39";"40-49";"50-59";"60-69";"70-79";"Total"
-"280030 Aracaju";1;4;45;61;43;27;10;2;193
-"280050 Areia Branca";0;0;0;0;1;1;0;0;2
-"280060 Barra dos Coqueiros";0;0;1;0;0;0;0;0;1
-"280120 Canindé de São Francisco";0;0;1;0;0;0;0;0;1
-"280130 Capela";0;0;0;0;0;0;0;1;1
-"280140 Carira";0;0;0;1;0;0;0;0;1
-"280210 Estância";0;0;0;0;1;0;0;0;1
-"280240 Gararu";0;0;0;1;0;0;0;1;2
-"280290 Itabaiana";0;0;0;1;0;1;0;0;2
-"280300 Itabaianinha";0;0;1;3;1;0;0;0;5
-"280320 Itaporanga d'Ajuda";0;0;1;0;0;0;0;0;1
-"280350 Lagarto";0;0;2;2;1;1;1;0;7
-"280400 Maruim";0;0;0;0;1;0;0;0;1
-"280420 Monte Alegre de Sergipe";0;0;0;1;0;0;0;0;1
-"280450 Nossa Senhora da Glória";0;0;0;1;1;1;0;0;3
-"280460 Nossa Senhora das Dores";0;0;0;0;0;1;0;0;1
-"280480 Nossa Senhora do Socorro";0;0;9;7;3;1;1;0;21
-"280600 Ribeirópolis";0;0;0;0;1;0;0;0;1
-"280630 Santa Luzia do Itanhy";0;0;0;0;1;0;0;0;1
-"280670 São Cristóvão";0;0;0;0;2;0;0;0;2
-"280720 Siriri";0;0;0;1;0;0;0;0;1
-"280740 Tobias Barreto";0;0;0;0;0;1;0;0;1
-"280760 Umbaúba";0;0;0;0;1;0;0;0;1
-"Total";1;4;60;79;57;34;12;4;251
+"Município (Res)";"2025";"Total"
+"280030 Aracaju";193;193
+"280050 Areia Branca";2;2
+"280060 Barra dos Coqueiros";1;1
+"280120 Canindé de São Francisco";1;1
+"280130 Capela";1;1
+"280140 Carira";1;1
+"280210 Estância";1;1
+"280240 Gararu";2;2
+"280290 Itabaiana";2;2
+"280300 Itabaianinha";5;5
+"280320 Itaporanga d'Ajuda";1;1
+"280350 Lagarto";7;7
+"280400 Maruim";1;1
+"280420 Monte Alegre de Sergipe";1;1
+"280450 Nossa Senhora da Glória";3;3
+"280460 Nossa Senhora das Dores";1;1
+"280480 Nossa Senhora do Socorro";21;21
+"280600 Ribeirópolis";1;1
+"280630 Santa Luzia do Itanhy";1;1
+"280670 São Cristóvão";2;2
+"280720 Siriri";1;1
+"280740 Tobias Barreto";1;1
+"280760 Umbaúba";1;1
+"Total";251;251

@@ -1,46 +1,48 @@
  Casos de aids identificados no Brasil
-Freqüência por Município (Res) e Ano Diagnóstico
+Freqüência por Município (Res) e Fx. Etária(13)
+Ano Diagnóstico: 2016
 UF Residência: Sergipe
+Região Res.: Região Nordeste
 Período:2016
-"Município (Res)";"2016";"Total"
-"280030 Aracaju";241;241
-"280050 Areia Branca";2;2
-"280060 Barra dos Coqueiros";1;1
-"280067 Boquim";3;3
-"280100 Campo do Brito";2;2
-"280120 Canindé de São Francisco";2;2
-"280130 Capela";2;2
-"280140 Carira";1;1
-"280150 Carmópolis";1;1
-"280160 Cedro de São João";2;2
-"280210 Estância";6;6
-"280250 General Maynard";2;2
-"280260 Gracho Cardoso";1;1
-"280270 Ilha das Flores";1;1
-"280290 Itabaiana";7;7
-"280300 Itabaianinha";3;3
-"280320 Itaporanga d'Ajuda";3;3
-"280350 Lagarto";3;3
-"280360 Laranjeiras";3;3
-"280370 Macambira";1;1
-"280410 Moita Bonita";1;1
-"280420 Monte Alegre de Sergipe";1;1
-"280430 Muribeca";1;1
-"280440 Neópolis";2;2
-"280450 Nossa Senhora da Glória";3;3
-"280480 Nossa Senhora do Socorro";31;31
-"280530 Pirambu";1;1
-"280540 Poço Redondo";1;1
-"280550 Poço Verde";1;1
-"280570 Propriá";6;6
-"280580 Riachão do Dantas";1;1
-"280590 Riachuelo";1;1
-"280620 Salgado";3;3
-"280650 Santa Rosa de Lima";1;1
-"280670 São Cristóvão";20;20
-"280690 São Francisco";2;2
-"280710 Simão Dias";2;2
-"280730 Telha";1;1
-"280740 Tobias Barreto";2;2
-"280760 Umbaúba";3;3
-"Total";371;371
+"Município (Res)";"< 1 ano";"1-4";"15-19";"20-29";"30-39";"40-49";"50-59";"60-69";"70-79";"Total"
+"280030 Aracaju";3;2;4;81;65;55;18;10;3;241
+"280050 Areia Branca";0;0;0;1;1;0;0;0;0;2
+"280060 Barra dos Coqueiros";0;0;0;1;0;0;0;0;0;1
+"280067 Boquim";0;0;0;0;0;1;1;0;1;3
+"280100 Campo do Brito";0;0;0;0;2;0;0;0;0;2
+"280120 Canindé de São Francisco";0;0;0;1;1;0;0;0;0;2
+"280130 Capela";0;0;0;1;1;0;0;0;0;2
+"280140 Carira";0;0;0;0;0;0;0;1;0;1
+"280150 Carmópolis";0;0;0;1;0;0;0;0;0;1
+"280160 Cedro de São João";0;0;0;1;0;0;1;0;0;2
+"280210 Estância";0;0;1;0;3;1;0;0;1;6
+"280250 General Maynard";0;0;0;0;0;0;2;0;0;2
+"280260 Gracho Cardoso";0;0;0;0;0;1;0;0;0;1
+"280270 Ilha das Flores";0;0;0;0;0;1;0;0;0;1
+"280290 Itabaiana";0;0;0;2;3;2;0;0;0;7
+"280300 Itabaianinha";0;0;0;1;1;1;0;0;0;3
+"280320 Itaporanga d'Ajuda";0;0;0;0;0;2;1;0;0;3
+"280350 Lagarto";0;0;0;1;2;0;0;0;0;3
+"280360 Laranjeiras";0;0;0;2;0;0;1;0;0;3
+"280370 Macambira";0;0;0;1;0;0;0;0;0;1
+"280410 Moita Bonita";0;0;0;1;0;0;0;0;0;1
+"280420 Monte Alegre de Sergipe";0;0;0;0;1;0;0;0;0;1
+"280430 Muribeca";0;0;0;1;0;0;0;0;0;1
+"280440 Neópolis";0;0;0;0;1;0;1;0;0;2
+"280450 Nossa Senhora da Glória";0;0;0;0;1;1;0;1;0;3
+"280480 Nossa Senhora do Socorro";1;0;0;9;11;4;5;1;0;31
+"280530 Pirambu";0;0;0;0;1;0;0;0;0;1
+"280540 Poço Redondo";0;0;0;0;1;0;0;0;0;1
+"280550 Poço Verde";0;0;0;0;0;1;0;0;0;1
+"280570 Propriá";0;0;0;1;2;3;0;0;0;6
+"280580 Riachão do Dantas";0;0;0;0;0;1;0;0;0;1
+"280590 Riachuelo";0;0;0;0;1;0;0;0;0;1
+"280620 Salgado";0;0;0;1;1;0;1;0;0;3
+"280650 Santa Rosa de Lima";0;0;0;0;1;0;0;0;0;1
+"280670 São Cristóvão";0;0;0;5;7;4;1;3;0;20
+"280690 São Francisco";0;0;0;0;1;1;0;0;0;2
+"280710 Simão Dias";0;0;0;0;1;0;1;0;0;2
+"280730 Telha";0;0;0;1;0;0;0;0;0;1
+"280740 Tobias Barreto";0;0;0;0;0;1;0;1;0;2
+"280760 Umbaúba";0;0;0;0;1;2;0;0;0;3
+"Total";4;2;5;113;110;82;33;17;5;371

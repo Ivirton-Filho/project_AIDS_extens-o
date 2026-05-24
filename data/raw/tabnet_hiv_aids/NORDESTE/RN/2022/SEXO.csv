@@ -1,84 +1,86 @@
  Casos de aids identificados no Brasil
-Freqüência por Município (Res) e Raça/cor
+Freqüência por Município (Res) e Sexo
+Ano Diagnóstico: 2022
 UF Residência: Rio Grande do Norte
+Região Res.: Região Nordeste
 Período:2022
-"Município (Res)";"Branca";"Preta";"Amarela";"Parda";"Ignorado";"Total"
-"240020 Açu";4;0;0;8;0;12
-"240030 Afonso Bezerra";0;0;0;2;0;2
-"240060 Almino Afonso";0;0;0;1;0;1
-"240080 Angicos";1;0;0;0;0;1
-"240100 Apodi";0;0;0;1;0;1
-"240110 Areia Branca";1;0;0;1;0;2
-"240120 Arês";0;0;0;2;0;2
-"240145 Baraúna";0;1;0;9;0;10
-"240150 Barcelona";1;0;0;0;0;1
-"240170 Bom Jesus";1;0;0;1;0;2
-"240200 Caicó";4;1;0;1;0;6
-"240220 Canguaretama";0;0;0;2;0;2
-"240240 Carnaúba dos Dantas";0;0;0;1;0;1
-"240250 Carnaubais";0;0;0;2;0;2
-"240260 Ceará-Mirim";0;1;0;5;0;6
-"240270 Cerro Corá";1;0;0;0;0;1
-"240300 Cruzeta";1;0;0;1;0;2
-"240310 Currais Novos";1;0;0;1;0;2
-"240350 Espírito Santo";0;0;0;1;0;1
-"240360 Extremoz";3;0;0;6;0;9
-"240430 Governador Dix-Sept Rosado";0;0;0;1;0;1
-"240440 Grossos";0;0;0;4;0;4
-"240450 Guamaré";0;0;0;2;0;2
-"240460 Ielmo Marinho";0;0;0;1;0;1
-"240470 Ipanguaçu";0;0;0;4;0;4
-"240500 Jaçanã";1;0;0;0;0;1
-"240510 Jandaíra";1;0;0;0;0;1
-"240530 Januário Cicco";0;1;0;0;0;1
-"240540 Japi";0;0;0;2;0;2
-"240560 Jardim de Piranhas";0;0;0;1;0;1
-"240590 João Dias";0;0;0;1;0;1
-"240600 José da Penha";1;0;0;0;0;1
-"240620 Lagoa d'Anta";1;0;0;0;0;1
-"240630 Lagoa de Pedras";0;0;0;1;0;1
-"240660 Lagoa Salgada";0;0;0;1;0;1
-"240670 Lajes";0;0;0;2;0;2
-"240700 Luís Gomes";0;0;0;1;0;1
-"240710 Macaíba";4;0;0;9;0;13
-"240720 Macau";2;0;0;6;0;8
-"240730 Marcelino Vieira";1;0;0;0;0;1
-"240740 Martins";0;0;0;1;0;1
-"240800 Mossoró";26;2;0;56;0;84
-"240810 Natal";64;5;2;204;4;279
-"240820 Nísia Floresta";1;0;0;3;0;4
-"240830 Nova Cruz";0;0;0;1;0;1
-"240870 Paraú";0;0;0;1;0;1
-"240880 Parazinho";0;0;0;2;0;2
-"240325 Parnamirim";17;3;0;26;0;46
-"240930 Patu";1;1;0;0;0;2
-"240940 Pau dos Ferros";0;0;0;2;0;2
-"240990 Pendências";0;0;0;2;0;2
-"241030 Presidente Juscelino";0;1;0;0;0;1
-"241040 Pureza";0;0;0;1;0;1
-"241050 Rafael Fernandes";0;1;0;0;0;1
-"241060 Rafael Godeiro";1;0;0;0;0;1
-"241080 Riacho de Santana";0;0;0;1;0;1
-"240895 Rio do Fogo";0;0;0;1;0;1
-"241100 Rodolfo Fernandes";0;0;0;1;0;1
-"241120 Santa Cruz";1;0;0;8;0;9
-"240933 Santa Maria";0;0;0;1;0;1
-"241200 São Gonçalo do Amarante";0;0;1;10;1;12
-"241220 São José de Mipibu";4;1;0;9;0;14
-"241230 São José do Campestre";1;0;0;2;0;3
-"241250 São Miguel";2;0;0;0;0;2
-"241260 São Paulo do Potengi";0;0;0;1;0;1
-"241280 São Rafael";0;0;0;2;0;2
-"241310 Senador Elói de Souza";0;1;0;1;0;2
-"241335 Serra do Mel";0;1;0;1;0;2
-"241340 Serra Negra do Norte";1;0;0;0;0;1
-"241350 Serrinha";0;0;0;2;0;2
-"241355 Serrinha dos Pintos";1;0;0;0;0;1
-"241380 Taboleiro Grande";1;0;0;0;0;1
-"241390 Taipu";0;1;0;0;0;1
-"241410 Tenente Ananias";0;0;0;1;0;1
-"241420 Tibau do Sul";0;0;0;1;0;1
-"241440 Touros";0;0;0;2;0;2
-"241460 Upanema";0;0;0;1;0;1
-"241480 Vera Cruz";1;0;0;0;0;1
-"Total";151;21;3;425;5;605
+"Município (Res)";"Masculino";"Feminino";"Ignorado";"Total"
+"240020 Açu";11;1;0;12
+"240030 Afonso Bezerra";2;0;0;2
+"240060 Almino Afonso";1;0;0;1
+"240080 Angicos";1;0;0;1
+"240100 Apodi";1;0;0;1
+"240110 Areia Branca";2;0;0;2
+"240120 Arês";1;1;0;2
+"240145 Baraúna";7;3;0;10
+"240150 Barcelona";1;0;0;1
+"240170 Bom Jesus";2;0;0;2
+"240200 Caicó";5;1;0;6
+"240220 Canguaretama";2;0;0;2
+"240240 Carnaúba dos Dantas";1;0;0;1
+"240250 Carnaubais";2;0;0;2
+"240260 Ceará-Mirim";5;1;0;6
+"240270 Cerro Corá";1;0;0;1
+"240300 Cruzeta";2;0;0;2
+"240310 Currais Novos";2;0;0;2
+"240350 Espírito Santo";0;1;0;1
+"240360 Extremoz";6;3;0;9
+"240430 Governador Dix-Sept Rosado";1;0;0;1
+"240440 Grossos";4;0;0;4
+"240450 Guamaré";2;0;0;2
+"240460 Ielmo Marinho";1;0;0;1
+"240470 Ipanguaçu";3;1;0;4
+"240500 Jaçanã";1;0;0;1
+"240510 Jandaíra";1;0;0;1
+"240530 Januário Cicco";1;0;0;1
+"240540 Japi";2;0;0;2
+"240560 Jardim de Piranhas";1;0;0;1
+"240590 João Dias";1;0;0;1
+"240600 José da Penha";1;0;0;1
+"240620 Lagoa d'Anta";1;0;0;1
+"240630 Lagoa de Pedras";0;1;0;1
+"240660 Lagoa Salgada";1;0;0;1
+"240670 Lajes";1;1;0;2
+"240700 Luís Gomes";0;1;0;1
+"240710 Macaíba";8;5;0;13
+"240720 Macau";7;1;0;8
+"240730 Marcelino Vieira";1;0;0;1
+"240740 Martins";1;0;0;1
+"240800 Mossoró";67;17;0;84
+"240810 Natal";222;56;1;279
+"240820 Nísia Floresta";3;1;0;4
+"240830 Nova Cruz";1;0;0;1
+"240870 Paraú";1;0;0;1
+"240880 Parazinho";1;1;0;2
+"240325 Parnamirim";39;7;0;46
+"240930 Patu";2;0;0;2
+"240940 Pau dos Ferros";2;0;0;2
+"240990 Pendências";0;2;0;2
+"241030 Presidente Juscelino";1;0;0;1
+"241040 Pureza";0;1;0;1
+"241050 Rafael Fernandes";1;0;0;1
+"241060 Rafael Godeiro";1;0;0;1
+"241080 Riacho de Santana";1;0;0;1
+"240895 Rio do Fogo";1;0;0;1
+"241100 Rodolfo Fernandes";0;1;0;1
+"241120 Santa Cruz";5;4;0;9
+"240933 Santa Maria";1;0;0;1
+"241200 São Gonçalo do Amarante";12;0;0;12
+"241220 São José de Mipibu";12;2;0;14
+"241230 São José do Campestre";3;0;0;3
+"241250 São Miguel";2;0;0;2
+"241260 São Paulo do Potengi";0;1;0;1
+"241280 São Rafael";2;0;0;2
+"241310 Senador Elói de Souza";2;0;0;2
+"241335 Serra do Mel";0;2;0;2
+"241340 Serra Negra do Norte";1;0;0;1
+"241350 Serrinha";2;0;0;2
+"241355 Serrinha dos Pintos";1;0;0;1
+"241380 Taboleiro Grande";1;0;0;1
+"241390 Taipu";1;0;0;1
+"241410 Tenente Ananias";1;0;0;1
+"241420 Tibau do Sul";1;0;0;1
+"241440 Touros";1;1;0;2
+"241460 Upanema";1;0;0;1
+"241480 Vera Cruz";0;1;0;1
+"Total";486;118;1;605

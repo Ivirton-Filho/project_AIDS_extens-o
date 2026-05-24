@@ -1,64 +1,66 @@
  Casos de aids identificados no Brasil
-Freqüência por Município (Res) e Sexo
+Freqüência por Município (Res) e Fx. Etária(13)
+Ano Diagnóstico: 2017
 UF Residência: Rio Grande do Norte
+Região Res.: Região Nordeste
 Período:2017
-"Município (Res)";"Masculino";"Feminino";"Total"
-"240020 Açu";7;2;9
-"240030 Afonso Bezerra";1;1;2
-"240080 Angicos";1;1;2
-"240100 Apodi";3;1;4
-"240110 Areia Branca";3;1;4
-"240140 Baía Formosa";1;0;1
-"240145 Baraúna";3;2;5
-"240170 Bom Jesus";1;0;1
-"240200 Caicó";10;0;10
-"240220 Canguaretama";5;1;6
-"240230 Caraúbas";0;1;1
-"240260 Ceará-Mirim";3;2;5
-"240310 Currais Novos";3;1;4
-"240360 Extremoz";11;0;11
-"240375 Fernando Pedroza";1;0;1
-"240440 Grossos";1;0;1
-"240450 Guamaré";2;0;2
-"240470 Ipanguaçu";1;1;2
-"240480 Ipueira";1;0;1
-"240490 Itaú";1;0;1
-"240580 João Câmara";1;1;2
-"240710 Macaíba";12;2;14
-"240720 Macau";3;0;3
-"240750 Maxaranguape";1;0;1
-"240770 Montanhas";1;0;1
-"240780 Monte Alegre";2;0;2
-"240800 Mossoró";74;33;107
-"240810 Natal";232;91;323
-"240820 Nísia Floresta";2;1;3
-"240870 Paraú";0;1;1
-"240880 Parazinho";1;0;1
-"240890 Parelhas";1;0;1
-"240325 Parnamirim";61;17;78
-"240910 Passa e Fica";2;0;2
-"240940 Pau dos Ferros";4;0;4
-"240970 Pedro Avelino";0;1;1
-"240990 Pendências";1;0;1
-"241000 Pilões";1;0;1
-"241010 Poço Branco";0;1;1
-"241030 Presidente Juscelino";0;2;2
-"240895 Rio do Fogo";0;1;1
-"241100 Rodolfo Fernandes";0;1;1
-"241110 Ruy Barbosa";1;0;1
-"241120 Santa Cruz";4;2;6
-"241200 São Gonçalo do Amarante";9;2;11
-"241220 São José de Mipibu";12;4;16
-"241250 São Miguel";3;0;3
-"241255 São Miguel do Gostoso";2;0;2
-"241260 São Paulo do Potengi";3;0;3
-"241320 Senador Georgino Avelino";1;0;1
-"241335 Serra do Mel";2;0;2
-"241370 Sítio Novo";2;0;2
-"241390 Taipu";1;0;1
-"241400 Tangará";2;0;2
-"241105 Tibau";2;1;3
-"241440 Touros";3;2;5
-"241475 Venha-Ver";1;0;1
-"241480 Vera Cruz";1;0;1
-"Total";507;177;684
+"Município (Res)";"1-4";"15-19";"20-29";"30-39";"40-49";"50-59";"60-69";"70-79";"Total"
+"240020 Açu";0;0;5;1;2;1;0;0;9
+"240030 Afonso Bezerra";0;0;0;2;0;0;0;0;2
+"240080 Angicos";0;0;1;1;0;0;0;0;2
+"240100 Apodi";0;1;0;1;0;1;1;0;4
+"240110 Areia Branca";0;0;1;2;1;0;0;0;4
+"240140 Baía Formosa";0;0;0;1;0;0;0;0;1
+"240145 Baraúna";0;1;0;2;0;2;0;0;5
+"240170 Bom Jesus";0;0;0;0;1;0;0;0;1
+"240200 Caicó";0;0;4;3;2;0;1;0;10
+"240220 Canguaretama";0;1;2;1;2;0;0;0;6
+"240230 Caraúbas";0;0;0;1;0;0;0;0;1
+"240260 Ceará-Mirim";0;0;1;2;2;0;0;0;5
+"240310 Currais Novos";0;1;1;0;2;0;0;0;4
+"240360 Extremoz";0;0;3;4;2;1;1;0;11
+"240375 Fernando Pedroza";0;0;1;0;0;0;0;0;1
+"240440 Grossos";0;0;1;0;0;0;0;0;1
+"240450 Guamaré";0;0;0;1;1;0;0;0;2
+"240470 Ipanguaçu";0;0;0;1;1;0;0;0;2
+"240480 Ipueira";0;0;0;0;1;0;0;0;1
+"240490 Itaú";0;0;0;0;1;0;0;0;1
+"240580 João Câmara";0;0;0;1;1;0;0;0;2
+"240710 Macaíba";0;0;4;6;2;0;1;1;14
+"240720 Macau";0;0;0;2;0;1;0;0;3
+"240750 Maxaranguape";0;0;1;0;0;0;0;0;1
+"240770 Montanhas";0;0;0;1;0;0;0;0;1
+"240780 Monte Alegre";0;0;0;2;0;0;0;0;2
+"240800 Mossoró";1;5;35;18;27;16;4;1;107
+"240810 Natal";3;10;100;87;64;40;16;3;323
+"240820 Nísia Floresta";0;0;0;2;1;0;0;0;3
+"240870 Paraú";0;0;0;1;0;0;0;0;1
+"240880 Parazinho";0;0;0;0;0;1;0;0;1
+"240890 Parelhas";0;0;0;1;0;0;0;0;1
+"240325 Parnamirim";0;2;19;23;17;14;3;0;78
+"240910 Passa e Fica";0;0;2;0;0;0;0;0;2
+"240940 Pau dos Ferros";0;0;1;2;1;0;0;0;4
+"240970 Pedro Avelino";0;0;0;1;0;0;0;0;1
+"240990 Pendências";0;0;0;0;1;0;0;0;1
+"241000 Pilões";0;0;0;0;1;0;0;0;1
+"241010 Poço Branco";0;0;0;1;0;0;0;0;1
+"241030 Presidente Juscelino";0;0;0;2;0;0;0;0;2
+"240895 Rio do Fogo";0;0;0;1;0;0;0;0;1
+"241100 Rodolfo Fernandes";0;0;0;0;0;0;1;0;1
+"241110 Ruy Barbosa";0;0;0;0;1;0;0;0;1
+"241120 Santa Cruz";0;0;3;1;1;1;0;0;6
+"241200 São Gonçalo do Amarante";0;1;4;4;2;0;0;0;11
+"241220 São José de Mipibu";0;2;8;5;0;0;1;0;16
+"241250 São Miguel";0;0;2;0;1;0;0;0;3
+"241255 São Miguel do Gostoso";0;0;1;0;0;0;1;0;2
+"241260 São Paulo do Potengi";0;0;2;0;1;0;0;0;3
+"241320 Senador Georgino Avelino";0;0;0;1;0;0;0;0;1
+"241335 Serra do Mel";0;0;0;1;0;1;0;0;2
+"241370 Sítio Novo";0;0;0;2;0;0;0;0;2
+"241390 Taipu";0;0;1;0;0;0;0;0;1
+"241400 Tangará";0;0;1;1;0;0;0;0;2
+"241105 Tibau";0;0;2;0;0;1;0;0;3
+"241440 Touros";0;0;0;3;2;0;0;0;5
+"241475 Venha-Ver";0;0;1;0;0;0;0;0;1
+"241480 Vera Cruz";0;0;0;0;1;0;0;0;1
+"Total";4;24;207;192;142;80;30;5;684
