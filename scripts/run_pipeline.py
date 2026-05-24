@@ -7,6 +7,7 @@ from src.hiv_dashboard.paths import RAW_DATA_DIR, PROCESSED_DATA_DIR
 from src.hiv_dashboard.data.step1_reading import ler_csv_tabnet
 from src.hiv_dashboard.data.step2_cleaning import limpar_dataframe
 from src.hiv_dashboard.data.step3_transform import consolidar
+from src.hiv_dashboard.data.step4_load_db import carregar_banco_de_dados
 
 def verificar_dados_brutos():
     print(f"\n{'=' * 50}")
@@ -76,6 +77,17 @@ def main():
     except Exception as e:
         print(f"\n FALHA na consolidação: {e}")
         sucesso = False
+
+    # --- Etapa 3: Carga no Banco de Dados ---
+    if sucesso:
+        try:
+            print(f"\n{'=' * 50}")
+            print("CARGA NO BANCO DE DADOS")
+            print(f"{'=' * 50}\n")
+            carregar_banco_de_dados()
+        except Exception as e:
+            print(f"\n FALHA na carga do banco: {e}")
+            sucesso = False
 
     # --- Resumo final ---
     print(f"\n{'=' * 52}")
