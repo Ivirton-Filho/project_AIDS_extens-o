@@ -6,3 +6,10 @@ venv/
 .idea/
 .streamlit/secrets.toml
 outputs/
+
+# Banco de Dados
+*.sqlite
+*.db
+
+# Dados Processados
+data/processed/
