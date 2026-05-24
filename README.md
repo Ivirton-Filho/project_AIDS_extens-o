@@ -4,6 +4,13 @@ Projeto de extensao para construir um dashboard com dados publicos sobre HIV/AID
 
 Neste momento, o repositorio esta em uma base inicial. A limpeza dos dados, os indicadores e a interface do dashboard ainda serao definidos.
 
+### Camadas
+
+1. **Dados brutos (`data/raw/tabnet_hiv_aids`)**: Guarda os arquivos exatamente como foram baixados. Evite editar esses CSVs manualmente.
+2. **Tratamento (`src/hiv_dashboard`)**: Usado para scripts de transformação de dados e caminhos importantes do projeto.
+3. **Scripts (`scripts`)**: Reservada para scripts de preparo e execução de pipeline.
+4. **Dashboard (`dashboard`)**: Reservada para a futura interface. Se depois a escolha for React, esta pasta pode virar `frontend/` ou conviver com uma pasta separada.
+
 ## Estrutura
 
 ```text
@@ -14,10 +21,11 @@ Neste momento, o repositorio esta em uma base inicial. A limpeza dos dados, os i
 │   ├── processed/                  # Futuras bases tratadas
 │   └── external/                   # GeoJSON, shapefiles e bases auxiliares
 ├── dashboard/                      # Futuro dashboard
-├── docs/
-│   └── arquitetura.md              # Decisoes e proximos passos
+├── scripts/
+│   └── run_pipeline.py             # Script de execução da pipeline de dados
 └── src/
     └── hiv_dashboard/
+        ├── data/                   # Transformação de dados
         └── paths.py                # Caminhos principais do projeto
 ```
 
@@ -31,10 +39,11 @@ pip install -r requirements.txt
 
 2. Defina a primeira rotina de leitura/limpeza dos dados.
 
-## Proximas decisoes
+## Proximas decisoes e passos sugeridos
 
-- definir como os CSVs brutos serao lidos;
-- definir a estrategia de limpeza;
-- definir quais graficos entram no MVP;
-- decidir se a interface final sera em Streamlit, React ou outro formato;
-- adicionar mapas somente depois de escolher a base geografica.
+- Definir como os CSVs brutos serao lidos e limpos.
+- Listar quais graficos precisam existir no MVP.
+- Criar a primeira rotina de preparo dos dados.
+- Adicionar os graficos ao dashboard.
+- Decidir se a interface final sera em Streamlit, React ou outro formato.
+- Adicionar mapa usando `data/external` com GeoJSON de municipios.
