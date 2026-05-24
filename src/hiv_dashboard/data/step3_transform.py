@@ -91,6 +91,13 @@ def consolidar(dados_lidos: list):
 
     print("Salvando em data/processed/:\n")
 
+    ORDEM_COLUNAS_DADOS = {
+        "SEXO": ["Masculino", "Feminino", "Ignorado", "nao_informado"],
+        "IDADE": ["< 1 ano", "1-4", "5-9", "10-14", "15-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80 e mais", "ignorado", "nao_informado"],
+        "ESCOLARIDADE": ["analfabeto", "1ª a 4ª série incompleta", "4ª série completa", "5ª a 8ª série incompleta", "fundamental completo", "médio incompleto", "médio completo", "superior incompleto", "superior completo", "não se aplica", "ignorado", "nao_informado"],
+        "RACA_COR": ["Branca", "Preta", "Amarela", "Parda", "Indígena", "Ignorado", "nao_informado"]
+    }
+
     for dimensao, lista_dfs in dados_por_dimensao.items():
         df_final = pd.concat(lista_dfs, ignore_index=True)
 
@@ -105,6 +112,18 @@ def consolidar(dados_lidos: list):
                 else:
                     partes.append(grupo)
             df_final = pd.concat(partes, ignore_index=True)
+
+        # Ordenar as colunas
+        colunas_contexto = [c for c in COLUNAS_CONTEXTO if c in df_final.columns]
+        if dimensao in ORDEM_COLUNAS_DADOS:
+            ordem = ORDEM_COLUNAS_DADOS[dimensao]
+            colunas_dados_ordenadas = [c for c in ordem if c in df_final.columns]
+            colunas_extras = [c for c in df_final.columns if c not in colunas_contexto and c not in ordem]
+            df_final = df_final[colunas_contexto + colunas_dados_ordenadas + colunas_extras]
+        elif dimensao == "ANO":
+            colunas_dados = [c for c in df_final.columns if c not in colunas_contexto]
+            colunas_dados.sort(key=lambda x: int(x) if str(x).isdigit() else 9999)
+            df_final = df_final[colunas_contexto + colunas_dados]
 
         # Salvar
         nome = nomes_saida.get(dimensao, dimensao.lower())
