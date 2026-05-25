@@ -3,11 +3,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from src.hiv_dashboard.paths import RAW_DATA_DIR, PROCESSED_DATA_DIR
-from src.hiv_dashboard.data.step1_reading import ler_csv_tabnet
-from src.hiv_dashboard.data.step2_cleaning import limpar_dataframe
-from src.hiv_dashboard.data.step3_transform import consolidar
-from src.hiv_dashboard.data.step4_load_db import carregar_banco_de_dados
+from src.paths import RAW_DATA_DIR, PROCESSED_DATA_DIR
+from src.step1_reading import ler_csv_tabnet
+from src.step2_cleaning import limpar_dataframe
+from src.step3_transform import consolidar
+from src.step4_load_db import carregar_banco_de_dados
 
 def verificar_dados_brutos():
     print(f"\n{'=' * 50}")

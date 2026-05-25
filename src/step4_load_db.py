@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 from pathlib import Path
-from src.hiv_dashboard.paths import PROCESSED_DATA_DIR, DATA_DIR
+from src.paths import PROCESSED_DATA_DIR, DATA_DIR
 
 def carregar_banco_de_dados():
     db_path = DATA_DIR / 'database.sqlite'

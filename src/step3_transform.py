@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 import pandas as pd
 
-from src.hiv_dashboard.paths import PROCESSED_DATA_DIR
+from src.paths import PROCESSED_DATA_DIR
 
 COLUNAS_CONTEXTO = ["regiao", "uf", "cod_ibge", "municipio", "ano_diagnostico"]
 

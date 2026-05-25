@@ -18,9 +18,12 @@ O projeto é composto por uma **Pipeline de Dados** automatizada — que extrai,
 ├── scripts/
 │   └── run_pipeline.py             # Script orquestrador que executa a pipeline de ETL
 ├── src/
-│   └── hiv_dashboard/
-│       ├── data/                   # Módulos de leitura, limpeza, transformação e carga
-│       └── paths.py                # Gerenciamento dinâmico de caminhos das pastas
+│   ├── __init__.py                 # Arquivo de inicialização do pacote
+│   ├── step1_reading.py            # Módulo de leitura
+│   ├── step2_cleaning.py           # Módulo de limpeza
+│   ├── step3_transform.py          # Módulo de transformação
+│   ├── step4_load_db.py            # Módulo de carga
+│   └── paths.py                    # Gerenciamento dinâmico de caminhos das pastas
 ├── requirements.txt                # Dependências Python do projeto
 └── README.md                       # Documentação do projeto
 ```
