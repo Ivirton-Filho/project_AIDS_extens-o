@@ -11,6 +11,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import requests
+import sqlite3
+import os
 
 
 st.set_page_config(
@@ -23,13 +25,27 @@ st.title("Dashboard Epidemiológico da AIDS")
 #carregando os dados
 @st.cache_data
 def carregar_dados():
+    db_path = os.path.join(os.path.dirname(__file__), "..", "data", "database.sqlite")
+    conn = sqlite3.connect(db_path)
+    
+    def load_and_pivot(table_name):
+        df = pd.read_sql_query(f"SELECT * FROM {table_name}", conn)
+        df_pivoted = df.pivot_table(
+            index=['regiao', 'uf', 'cod_ibge', 'municipio', 'ano_diagnostico'],
+            columns='categoria',
+            values='quantidade',
+            aggfunc='sum'
+        ).reset_index()
+        df_pivoted.columns.name = None
+        return df_pivoted
 
-    sexo = pd.read_csv("sexo.csv")
-    raca = pd.read_csv("raça_cor.csv")
-    idade = pd.read_csv("idade.csv")
-    escolaridade = pd.read_csv("escolaridade.csv")
-    ano = pd.read_csv("ano.csv")
-
+    sexo = load_and_pivot("dados_sexo")
+    raca = load_and_pivot("dados_raca_cor")
+    idade = load_and_pivot("dados_idade")
+    escolaridade = load_and_pivot("dados_escolaridade")
+    ano = load_and_pivot("dados_ano")
+    
+    conn.close()
     return sexo, raca, idade, escolaridade, ano
 
 
