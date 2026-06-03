@@ -13,7 +13,11 @@ import plotly.express as px
 import requests
 import sqlite3
 import os
+from dotenv import load_dotenv
+from langchain_groq import ChatGroq
+from langchain_experimental.agents import create_pandas_dataframe_agent
 
+load_dotenv()
 
 st.set_page_config(
     page_title="Dashboard Epidemiológico da AIDS",
@@ -212,7 +216,8 @@ c3.metric(
 st.divider()
 
 #definindo abas
-aba1, aba2, aba3, aba4, aba5, aba6 = st.tabs([
+aba7, aba1, aba2, aba3, aba4, aba5, aba6 = st.tabs([
+    "🤖 Chat Especialista",
     "📈 Casos por Ano",
     "👨‍👩‍👧 Casos por Sexo",
     "🎨 Casos por Raça/Cor",
@@ -508,3 +513,65 @@ with aba6:
             fig,
             use_container_width=True
         )
+
+#aba 7 - chat especialista
+with aba7:
+    st.subheader("Chatbot Especialista em Dados")
+    st.write("Faça perguntas em linguagem natural sobre os dados filtrados. A inteligência artificial vai analisar a tabela e te responder!")
+
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    api_key = os.getenv("GROQ_API_KEY")
+
+    if not api_key:
+        st.warning(" Chave da API do Groq não encontrada. Configure o arquivo .env com a variável GROQ_API_KEY.")
+    else:
+        prompt = st.chat_input("Ex: Quantos casos temos para pessoas indígenas?")
+
+        if prompt:
+            st.chat_message("user").markdown(prompt)
+            st.session_state.messages.append({"role": "user", "content": prompt})
+
+            llm = ChatGroq(model="llama-3.3-70b-versatile", api_key=api_key, temperature=0.0)
+
+            try:
+                PREFIX = """
+Você é um analista de dados especialista em saúde.
+Os 5 dataframes que você recebeu representam os dados filtrados de AIDS:
+- df1: Casos por sexo
+- df2: Casos por raça/cor
+- df3: Casos por faixa etária
+- df4: Casos por escolaridade
+- df5: Casos por ano
+
+Regras para suas respostas:
+1. Responda de forma completa, explicativa e educada em português do Brasil.
+2. NUNCA omita ou corte números. Se o número for decimal (com vírgula/ponto), mostre todas as casas decimais disponíveis ou formate com pelo menos 2 casas decimais (ex: 15,84 ou 1.250,50). Não retorne apenas o primeiro dígito de um número quebrado.
+3. Certifique-se de realizar os cálculos corretamente nos dataframes antes de dar o resultado final.
+"""
+                # O allow_dangerous_code=True é necessário no langchain-experimental
+                agent = create_pandas_dataframe_agent(
+                    llm, 
+                    [sexo_filtrado, raca_filtrado, idade_filtrado, escolaridade_filtrado, ano_filtrado],
+                    verbose=True, 
+                    allow_dangerous_code=True,
+                    prefix=PREFIX,
+                    max_iterations=4,
+                    agent_executor_kwargs={"handle_parsing_errors": True}
+                )
+                
+                with st.spinner("Analisando os dados..."):
+                    resposta = agent.invoke(prompt)
+                
+                with st.chat_message("assistant"):
+                    st.markdown(resposta["output"])
+                
+                st.session_state.messages.append({"role": "assistant", "content": resposta["output"]})
+                
+            except Exception as e:
+                st.error(f"Erro ao processar a pergunta: {e}")
