@@ -7,9 +7,10 @@ venv/
 .streamlit/secrets.toml
 outputs/
 
-# Banco de Dados
+# Banco de Dados (ignora por padrão, mas permite o banco do dashboard)
 *.sqlite
 *.db
+!data/database.sqlite
 
 # Dados Processados
 data/processed/
