@@ -541,38 +541,80 @@ with aba7:
             llm = ChatGroq(model="llama-3.3-70b-versatile", api_key=api_key, temperature=0.0)
 
             try:
-                PREFIX = """
-Você é um analista de dados especialista em saúde.
-Os 5 dataframes que você recebeu representam os dados filtrados de AIDS:
-- df1: Casos por sexo
-- df2: Casos por raça/cor
-- df3: Casos por faixa etária
-- df4: Casos por escolaridade
-- df5: Casos por ano
+                # === Monta os filtros do dashboard como cláusula WHERE ===
+                filtro_regiao = f" AND regiao = '{regiao}'" if regiao != "Todas" else ""
+                filtro_uf = f" AND uf = '{uf}'" if uf != "Todas" else ""
+                filtro_municipio = f" AND municipio = '{municipio}'" if municipio != "Todos" else ""
+                filtros_sql = filtro_regiao + filtro_uf + filtro_municipio
+                
+                if filtros_sql.startswith(" AND"):
+                    filtros_sql = "WHERE " + filtros_sql[5:]
+                elif filtros_sql:
+                    filtros_sql = "WHERE" + filtros_sql
 
-Regras para suas respostas:
-1. Responda de forma completa, explicativa e educada em português do Brasil.
-2. NUNCA omita ou corte números. Se o número for decimal (com vírgula/ponto), mostre todas as casas decimais disponíveis ou formate com pelo menos 2 casas decimais (ex: 15,84 ou 1.250,50). Não retorne apenas o primeiro dígito de um número quebrado.
-3. Certifique-se de realizar os cálculos corretamente nos dataframes antes de dar o resultado final.
+                # === PASSO 1: IA gera a query SQL (1 requisição) ===
+                prompt_sql = f"""Você é um especialista em SQL (SQLite).
+O banco de dados possui 5 tabelas, todas com a mesma estrutura:
+regiao (TEXT), uf (TEXT), cod_ibge (REAL), municipio (TEXT), ano_diagnostico (INTEGER), categoria (TEXT), quantidade (REAL).
+
+Tabelas disponíveis (escolha a mais adequada para a pergunta):
+- dados_sexo (categorias: Masculino, Feminino)
+- dados_raca_cor (categorias: Branca, Preta, Amarela, Parda, Indígena, Ignorado)
+- dados_idade (categorias: < 1 ano, 1-4, 5-9, 10-14, 15-19, 20-29, 30-39, 40-49, 50-59, 60-69, 70-79, 80 e mais)
+- dados_escolaridade (categorias: analfabeto, 1ª a 4ª série incompleta, 4ª série completa, 5ª a 8ª série incompleta, fundamental completo, médio incompleto, médio completo, superior incompleto, superior completo)
+- dados_ano (categorias: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025)
+
+A coluna 'quantidade' contém o número de casos. Para totais, use SUM(quantidade).
+
+FILTROS ATIVOS NO DASHBOARD (OBRIGATÓRIO incluir na cláusula WHERE):
+{filtros_sql if filtros_sql else "(Nenhum filtro ativo - consulte todos os dados)"}
+
+Pergunta do usuário: {prompt}
+
+REGRAS:
+1. Retorne APENAS a query SQL pura. Sem explicações, sem markdown, sem ```sql.
+2. Se a pergunta envolver múltiplas dimensões (ex: sexo E raça), use JOIN ou múltiplas queries com UNION.
 """
-                # O allow_dangerous_code=True é necessário no langchain-experimental
-                agent = create_pandas_dataframe_agent(
-                    llm, 
-                    [sexo_filtrado, raca_filtrado, idade_filtrado, escolaridade_filtrado, ano_filtrado],
-                    verbose=True, 
-                    allow_dangerous_code=True,
-                    prefix=PREFIX,
-                    max_iterations=4,
-                    agent_executor_kwargs={"handle_parsing_errors": True}
-                )
+                with st.spinner("🔍 Gerando consulta..."):
+                    resposta_sql = llm.invoke(prompt_sql)
+                    query_sql = resposta_sql.content.strip()
+                    # Limpa possíveis formatações markdown
+                    query_sql = query_sql.replace("```sql", "").replace("```", "").strip()
                 
-                with st.spinner("Analisando os dados..."):
-                    resposta = agent.invoke(prompt)
+                # === Execução local no SQLite (0 requisições) ===
+                db_path = os.path.join(os.path.dirname(__file__), "..", "data", "database.sqlite")
+                conn = sqlite3.connect(db_path)
+                df_resultado = pd.read_sql_query(query_sql, conn)
+                conn.close()
+
+                # === PASSO 2: IA formula resposta em linguagem natural (1 requisição) ===
+                prompt_resposta = f"""Você é um analista de dados especialista em saúde pública, focado em AIDS/HIV.
+O usuário perguntou: "{prompt}"
+
+O banco de dados retornou o seguinte resultado:
+{df_resultado.to_string(index=False) if not df_resultado.empty else "Nenhum dado encontrado para os filtros aplicados."}
+
+Regras:
+1. Responda de forma completa, educada e direta em português do Brasil.
+2. Formate números grandes com separador de milhar (ex: 1.388 em vez de 1388).
+3. Se houver múltiplas linhas, organize a resposta de forma clara (use listas ou destaque os principais pontos).
+4. NÃO mencione SQL, queries ou bancos de dados. Fale como se você soubesse os dados de cabeça.
+5. Se não houver dados, informe educadamente e sugira ajustar os filtros do dashboard.
+"""
+                with st.spinner("💬 Formulando resposta..."):
+                    resposta_final = llm.invoke(prompt_resposta).content
                 
+                # === Exibição no Streamlit ===
                 with st.chat_message("assistant"):
-                    st.markdown(resposta["output"])
+                    st.markdown(resposta_final)
+                    with st.expander("🛠️ Detalhes Técnicos (Tabela e SQL)"):
+                        st.dataframe(df_resultado, hide_index=True)
+                        st.code(query_sql, language="sql")
                 
-                st.session_state.messages.append({"role": "assistant", "content": resposta["output"]})
+                st.session_state.messages.append({"role": "assistant", "content": resposta_final})
                 
             except Exception as e:
                 st.error(f"Erro ao processar a pergunta: {e}")
+                if 'query_sql' in locals():
+                    with st.expander("Ver SQL gerado pela IA (que causou o erro)"):
+                        st.code(query_sql, language="sql")
