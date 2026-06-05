@@ -526,7 +526,8 @@ with aba7:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-    api_key = os.getenv("GROQ_API_KEY")
+    # Tenta st.secrets (Streamlit Cloud) primeiro, depois .env (local)
+    api_key = st.secrets.get("GROQ_API_KEY", None) or os.getenv("GROQ_API_KEY")
 
     if not api_key:
         st.warning(" Chave da API do Groq não encontrada. Configure o arquivo .env com a variável GROQ_API_KEY.")
